@@ -1,31 +1,36 @@
 ﻿class Task
 {
-    void centimeters() // From meters to centimeters
+    void liters() // From grams to liters
     {
-        Console.WriteLine("From meters to centimeters:\n");
+        Console.WriteLine("From grams to liters\n");
 
-        Console.WriteLine("Enter meters");
-        int meters = int.Parse(Console.ReadLine());
-        int centimeters = meters * 100;
+        Console.WriteLine("Enter grams");
 
-        Console.WriteLine("meters to centimeters: " + centimeters);
+        int grams = int.Parse(Console.ReadLine());
+
+        double liters = (double)grams / 1000;
+
+        Console.WriteLine("grams to liter: " + liters);
     }
 
-    void kilometers() // From meters to km
+    void gallons() // From liters to gallons
     {
-        Console.WriteLine("From meters to km:\n");
+        Console.WriteLine("From liters to gallons\n");
 
-        Console.WriteLine("Enter meters");
-        int meters = int.Parse(Console.ReadLine());
-        double kilometers = (double)meters / 1000;
+        Console.WriteLine("Enter liters");
 
-        Console.WriteLine("meters to kilometers: " + kilometers);
+        int liters = int.Parse(Console.ReadLine());
+
+        double gallons = (double)liters / 3.785;
+
+        Console.WriteLine("liters to gallons: " + gallons);
     }
+
 
     static void Main(string[] args)
     {
         Task task = new Task();
-        task.centimeters();
-        task.kilometers();
+        task.liters();
+        task.gallons();
     }
 }
