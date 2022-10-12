@@ -1,36 +1,22 @@
 ﻿class Task
 {
-    void liters() // From grams to liters
+    void degrees() // Celsius to degrees
     {
-        Console.WriteLine("From grams to liters\n");
+        Console.WriteLine("Celsius to degrees\n");
 
-        Console.WriteLine("Enter grams");
+        Console.WriteLine("Celsius");
 
-        int grams = int.Parse(Console.ReadLine());
+        double Celsius = int.Parse(Console.ReadLine());
 
-        double liters = (double)grams / 1000;
+        double degrees = (Celsius * 9 / 5) + 32;
 
-        Console.WriteLine("grams to liter: " + liters);
-    }
-
-    void gallons() // From liters to gallons
-    {
-        Console.WriteLine("From liters to gallons\n");
-
-        Console.WriteLine("Enter liters");
-
-        int liters = int.Parse(Console.ReadLine());
-
-        double gallons = (double)liters / 3.785;
-
-        Console.WriteLine("liters to gallons: " + gallons);
+        Console.WriteLine("Celsius to degrees: " + degrees);
     }
 
 
     static void Main(string[] args)
     {
         Task task = new Task();
-        task.liters();
-        task.gallons();
+        task.degrees();
     }
 }
